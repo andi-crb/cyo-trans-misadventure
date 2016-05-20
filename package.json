@@ -1,25 +1,21 @@
 {
-  "name": "cyo-trans-misadventure",
+  "name": "react-hello-world",
   "version": "1.0.0",
-  "description": "Choose Your Own Adventure game about healthcare for gender diverse young people",
-  "main": "main.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/andi-crb/cyo-trans-misadventure.git"
+    "dev": "webpack -d --watch",
+    "build" : "webpack -p"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/andi-crb/cyo-trans-misadventure/issues"
-  },
-  "homepage": "https://github.com/andi-crb/cyo-trans-misadventure#readme",
   "dependencies": {
-    "react": "^15.0.2",
-    "react-dom": "^15.0.2",
-    "webpack": "^1.13.0",
-    "webpack-dev-server": "^1.14.1"
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "webpack": "^1.12.8"
   }
 }
