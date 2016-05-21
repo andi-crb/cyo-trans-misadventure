@@ -20188,7 +20188,7 @@
   \**********************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -20201,6 +20201,8 @@
 	var _react2 = _interopRequireDefault(_react);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
@@ -20218,15 +20220,368 @@
 	  }
 	
 	  _createClass(Board, [{
-	    key: 'render',
+	    key: "render",
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'div',
+	        "div",
 	        null,
 	        _react2.default.createElement(
-	          'p',
+	          "table",
 	          null,
-	          'This will one day be a board. '
+	          _react2.default.createElement(
+	            "tbody",
+	            null,
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { rowSpan: "8", className: "barrier" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { rowSpan: "3", colSpan: "3", className: "building" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { rowSpan: "2", colSpan: "2", className: "building" })
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", { rowSpan: "4", colSpan: "4", className: "building" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { rowSpan: "4", colSpan: "3", className: "building" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { rowSpan: "4", colSpan: "6", className: "building" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null)
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null)
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", _defineProperty({ rowSpan: "6", className: "barrier" }, "className", "building")),
+	              _react2.default.createElement("td", null)
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { rowSpan: "5", colSpan: "3", className: "building" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null)
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null)
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { colSpan: "8", className: "barrier" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { colSpan: "6", className: "barrier" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null)
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null)
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", { colSpan: "8", className: "barrier" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { rowSpan: "6", colSpan: "6", className: "building" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null)
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { rowSpan: "3", colSpan: "6", className: "building" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null)
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", { rowSpan: "3", colSpan: "3", className: "building" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { colSpan: "6", className: "barrier" })
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null)
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { colSpan: "6", className: "barrier" }),
+	              _react2.default.createElement("td", null)
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { colSpan: "6", className: "barrier" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null)
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", { colSpan: "6", className: "barrier" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { rowSpan: "3", colSpan: "3", className: "building" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { colSpan: "6", className: "barrier" })
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { colSpan: "6", className: "barrier" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null)
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { rowSpan: "3", colSpan: "3", className: "building" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { rowSpan: "3", className: "barrier" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { colSpan: "6", className: "barrier" })
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { rowSpan: "3", colSpan: "6", className: "building" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null)
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { rowSpan: "6", colSpan: "4", className: "building" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { rowSpan: "6", colSpan: "6", className: "building" })
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { colSpan: "5", className: "barrier" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null)
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { rowSpan: "3", colSpan: "3", className: "building" }),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null)
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", { rowSpan: "3", colSpan: "6", className: "building" }),
+	              _react2.default.createElement("td", null)
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null)
+	            ),
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null),
+	              _react2.default.createElement("td", null)
+	            )
+	          )
 	        )
 	      );
 	    }
