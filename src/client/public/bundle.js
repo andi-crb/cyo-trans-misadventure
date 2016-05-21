@@ -20235,7 +20235,15 @@
 	  }, {
 	    key: 'handleKeyDown',
 	    value: function handleKeyDown(e) {
-	      console.log("A key!", e);
+	      if (e.keyCode == 38) {
+	        console.log("up");
+	      } else if (e.keyCode == 40) {
+	        console.log("down");
+	      } else if (e.keyCode == 39) {
+	        console.log("left");
+	      } else if (e.keyCode == 37) {
+	        console.log("right");
+	      }
 	    }
 	  }, {
 	    key: 'render',
