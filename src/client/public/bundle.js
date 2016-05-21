@@ -20194,8 +20194,6 @@
 	  value: true
 	});
 	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
 	var _react = __webpack_require__(/*! react */ 1);
 	
 	var _react2 = _interopRequireDefault(_react);
@@ -20210,66 +20208,86 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	exports.default = _react2.default.createClass({
+	  displayName: 'Board',
+	  getInitialState: function getInitialState() {
+	    return {
+	      arr: [[0, 0, 0, 0, 0, 0, 0, 0, 0, "b", 0, 0, 0, 0, 0, 0, 0, 0, "u", "u", "u", 0, "u", "a"], ["u", "u", "u", "u", 0, "u", "u", "u", 0, "b", 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", 0, "u", "u"], ["u", "u", "u", "u", 0, "u", "u", "u", 0, "b", 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", 0, 0, 0], ["u", "u", "u", "u", 0, "u", "u", "u", 0, "b", 0, "u", "u", "u", "u", "u", "u", 0, 0, 0, 0, 0, "b", 0], ["u", "u", "u", "u", 0, "u", "u", "u", 0, "b", 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", 0, "b", 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, "b", 0, 0, 0, 0, 0, 0, 0, 0, "u", "u", "u", 0, "b", 0], [0, "b", "b", "b", "b", "b", "b", "b", "b", "b", 0, "b", "b", "b", "b", "b", "b", 0, "u", "u", "u", 0, "b", 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, "b", 0, 0, 0, 0, 0, 0, 0, 0, "u", "u", "u", 0, "b", 0], ["b", "b", "b", "b", "b", "b", "b", "b", 0, 0, 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", 0, "b", 0], [0, 0, 0, 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u", 0, 0, 0, 0, 0, 0, 0], ["u", "u", "u", 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u", 0, "b", "b", "b", "b", "b", "b"], ["u", "u", "u", 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u", 0, 0, 0, 0, 0, 0, 0], ["u", "u", "u", 0, 0, 0, 0, 0, 0, 0, 0, "u", "u", "u", "u", "u", "u", "b", "b", "b", "b", "b", "b", 0], [0, 0, 0, 0, "b", "b", "b", "b", "b", "b", 0, "u", "u", "u", "u", "u", "u", 0, 0, 0, 0, 0, 0, 0], ["b", "b", "b", "b", "b", "b", 0, "u", "u", "u", 0, 0, 0, 0, 0, 0, 0, 0, "b", "b", "b", "b", "b", "b"], [0, 0, 0, 0, 0, 0, 0, "u", "u", "u", 0, "b", "b", "b", "b", "b", "b", 0, 0, 0, 0, 0, 0, 0], [0, "u", "u", "u", 0, "b", 0, "u", "u", "u", 0, 0, 0, 0, 0, 0, 0, 0, "b", "b", "b", "b", "b", "b"], [0, "u", "u", "u", 0, "b", 0, 0, 0, 0, 0, "u", "u", "u", "u", "u", "u", 0, 0, 0, 0, 0, 0, 0], [0, "u", "u", "u", 0, "b", "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u"], [0, "b", "b", "b", "b", "b", "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u"], [0, "u", "u", "u", "b", 0, "u", "u", "u", "u", 0, 0, 0, 0, 0, 0, 0, 0, "u", "u", "u", "u", "u", "u"], [0, "u", "u", "u", "b", 0, "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u"], [0, "u", "u", "u", "b", 0, "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u"], [0, 0, 0, 0, 0, 0, "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u"]],
+	      row: 1,
+	      col: 23,
+	      previousState: "u"
 	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Board = function (_React$Component) {
-	  _inherits(Board, _React$Component);
-	
-	  function Board() {
-	    _classCallCheck(this, Board);
-	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Board).apply(this, arguments));
-	  }
-	
-	  _createClass(Board, [{
-	    key: 'getInitialState',
-	    value: function getInitialState() {
-	      return {
-	        arr: [[0, 0, 0, 0, 0, 0, 0, 0, 0, "b", 0, 0, 0, 0, 0, 0, 0, 0, "u", "u", "u", 0, "u", "u"], ["u", "u", "u", "u", 0, "u", "u", "u", 0, "b", 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", 0, "u", "u"], ["u", "u", "u", "u", 0, "u", "u", "u", 0, "b", 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", 0, 0, 0], ["u", "u", "u", "u", 0, "u", "u", "u", 0, "b", 0, "u", "u", "u", "u", "u", "u", 0, 0, 0, 0, 0, "b", 0], ["u", "u", "u", "u", 0, "u", "u", "u", 0, "b", 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", 0, "b", 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, "b", 0, 0, 0, 0, 0, 0, 0, 0, "u", "u", "u", 0, "b", 0], [0, "b", "b", "b", "b", "b", "b", "b", "b", "b", 0, "b", "b", "b", "b", "b", "b", 0, "u", "u", "u", 0, "b", 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, "b", 0, 0, 0, 0, 0, 0, 0, 0, "u", "u", "u", 0, "b", 0], ["b", "b", "b", "b", "b", "b", "b", "b", 0, 0, 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", 0, "b", 0], [0, 0, 0, 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u", 0, 0, 0, 0, 0, 0, 0], ["u", "u", "u", 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u", 0, "b", "b", "b", "b", "b", "b"], ["u", "u", "u", 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u", 0, 0, 0, 0, 0, 0, 0], ["u", "u", "u", 0, 0, 0, 0, 0, 0, 0, 0, "u", "u", "u", "u", "u", "u", "b", "b", "b", "b", "b", "b", 0], [0, 0, 0, 0, "b", "b", "b", "b", "b", "b", 0, "u", "u", "u", "u", "u", "u", 0, 0, 0, 0, 0, 0, 0], ["b", "b", "b", "b", "b", "b", 0, "u", "u", "u", 0, 0, 0, 0, 0, 0, 0, 0, "b", "b", "b", "b", "b", "b"], [0, 0, 0, 0, 0, 0, 0, "u", "u", "u", 0, "b", "b", "b", "b", "b", "b", 0, 0, 0, 0, 0, 0, 0], [0, "u", "u", "u", 0, "b", 0, "u", "u", "u", 0, 0, 0, 0, 0, 0, 0, 0, "b", "b", "b", "b", "b", "b"], [0, "u", "u", "u", 0, "b", 0, 0, 0, 0, 0, "u", "u", "u", "u", "u", "u", 0, 0, 0, 0, 0, 0, 0], [0, "u", "u", "u", 0, "b", "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u"], [0, "b", "b", "b", "b", "b", "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u"], [0, "u", "u", "u", "b", 0, "u", "u", "u", "u", 0, 0, 0, 0, 0, 0, 0, 0, "u", "u", "u", "u", "u", "u"], [0, "u", "u", "u", "b", 0, "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u"], [0, "u", "u", "u", "b", 0, "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u"], [0, 0, 0, 0, 0, 0, "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u", 0, "u", "u", "u", "u", "u", "u"]],
-	        currentRow: 0,
-	        currentCol: 23,
-	        previousState: "u"
-	
-	      };
+	    };
+	  },
+	  componentDidMount: function componentDidMount() {
+	    (0, _jquery2.default)(document.body).on('keydown', this.handleKeyDown);
+	  },
+	  handleKeyDown: function handleKeyDown(e) {
+	    var row = this.state.row;
+	    var col = this.state.col;
+	    var arr = this.state.arr;
+	    var prev = this.state.previousState;
+	    if (e.keyCode == 38 && row > -1) {
+	      arr[row][col] = prev;
+	      row = row - 1;
+	      var newPrevious = arr[row][col];
+	      this.setState({ previousState: newPrevious });
+	      arr[row][col] = "a";
+	      this.setState({ row: row });
+	      this.setState({ arr: arr });
+	    } else if (e.keyCode == 40 && row < 24) {
+	      arr[row][col] = prev;
+	      row = row + 1;
+	      var newPrevious = arr[row][col];
+	      this.setState({ previousState: newPrevious });
+	      arr[row][col] = "a";
+	      this.setState({ row: row });
+	      this.setState({ arr: arr });
+	    } else if (e.keyCode == 37) {
+	      arr[row][col] = prev;
+	      col = col - 1;
+	      var newPrevious = arr[row][col];
+	      this.setState({ previousState: newPrevious });
+	      arr[row][col] = "a";
+	      this.setState({ col: col });
+	      this.setState({ arr: arr });
+	    } else if (e.keyCode == 39) {
+	      arr[row][col] = prev;
+	      col = col - 1;
+	      var newPrevious = arr[row][col];
+	      this.setState({ previousState: newPrevious });
+	      arr[row][col] = "a";
+	      this.setState({ col: col });
+	      this.setState({ arr: arr });
 	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
+	  },
+	  render: function render() {
 	
-	      var arr = this.state.arr;
-	      var rows = arr.map(function (item, i) {
-	        var entry = item.map(function (element, j) {
-	          return _react2.default.createElement('td', { className: element });
-	        });
-	        return _react2.default.createElement(
-	          'tr',
-	          { key: i },
-	          ' ',
-	          entry,
-	          ' '
-	        );
+	    var arr = this.state.arr;
+	    var rows = arr.map(function (item, i) {
+	      var entry = item.map(function (element, j) {
+	        return _react2.default.createElement('td', { className: element });
 	      });
-	
 	      return _react2.default.createElement(
-	        'table',
-	        null,
-	        _react2.default.createElement(
-	          'tbody',
-	          null,
-	          rows
-	        )
+	        'tr',
+	        { key: i },
+	        ' ',
+	        entry,
+	        ' '
 	      );
-	    }
-	  }]);
+	    });
 	
-	  return Board;
-	}(_react2.default.Component);
-	
-	exports.default = Board;
+	    return _react2.default.createElement(
+	      'table',
+	      null,
+	      _react2.default.createElement(
+	        'tbody',
+	        null,
+	        rows
+	      )
+	    );
+	  }
+	});
 
 /***/ },
 /* 160 */
