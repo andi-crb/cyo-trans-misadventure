@@ -4,333 +4,59 @@ import $ from 'jquery';
 
 class Board extends React.Component {
 
-componentDidMount () {
-  $(document.body).on('keydown', this.handleKeyDown);
-}
 
-handleKeyDown (e) {
-  if (e.keyCode == 38) {
-    console.log("up")
-  } else if (e.keyCode == 40){
-    console.log("down")
-  } else if (e.keyCode == 39){
-    console.log("left")
-  } else if (e.keyCode == 37) {
-    console.log("right")
+
+getInitialState(){
+  return {
+    arr: [
+      [0,0,0,0,0,0,0,0,0,"b",0,0,0,0,0,0,0,0,"u","u","u",0,"u","u"],
+      ["u","u","u","u",0,"u","u","u",0,"b",0,"u","u","u","u","u","u",0,"u","u","u",0,"u","u"],
+      ["u","u","u","u",0,"u","u","u",0,"b",0,"u","u","u","u","u","u",0,"u","u","u",0,0,0],
+      ["u","u","u","u",0,"u","u","u",0,"b",0,"u","u","u","u","u","u",0,0,0,0,0,"b",0],
+      ["u","u","u","u",0,"u","u","u",0,"b",0,"u","u","u","u","u","u",0,"u","u","u",0,"b",0],
+      [0,0,0,0,0,0,0,0,0,"b",0,0,0,0,0,0,0,0,"u","u","u",0,"b",0],
+      [0,"b","b","b","b","b","b","b","b","b",0,"b","b","b","b","b","b",0,"u","u","u",0,"b",0],
+      [0,0,0,0,0,0,0,0,0,"b",0,0,0,0,0,0,0,0,"u","u","u",0,"b",0],
+      ["b","b","b","b","b","b","b","b",0,0,0,"u","u","u","u","u","u",0,"u","u","u",0,"b",0],
+      [0,0,0,0,"u","u","u","u","u","u",0,"u","u","u","u","u","u",0,0,0,0,0,0,0],
+      ["u","u","u",0,"u","u","u","u","u","u",0,"u","u","u","u","u","u",0,"b","b","b","b","b","b"],
+      ["u","u","u",0,"u","u","u","u","u","u",0,"u","u","u","u","u","u",0,0,0,0,0,0,0],
+      ["u","u","u",0,0,0,0,0,0,0,0,"u","u","u","u","u","u","b","b","b","b","b","b",0],
+      [0,0,0,0,"b","b","b","b","b","b",0,"u","u","u","u","u","u",0,0,0,0,0,0,0],
+      ["b","b","b","b","b","b",0,"u","u","u",0,0,0,0,0,0,0,0,"b","b","b","b","b","b"],
+      [0,0,0,0,0,0,0,"u","u","u",0,"b","b","b","b","b","b",0,0,0,0,0,0,0],
+      [0,"u","u","u",0,"b",0,"u","u","u",0,0,0,0,0,0,0,0,"b","b","b","b","b","b"],
+      [0,"u","u","u",0,"b",0,0,0,0,0,"u","u","u","u","u","u",0,0,0,0,0,0,0],
+      [0,"u","u","u",0,"b","u","u","u","u",0,"u","u","u","u","u","u",0,"u","u","u","u","u","u"],
+      [0,"b","b","b","b","b","u","u","u","u",0,"u","u","u","u","u","u",0,"u","u","u","u","u","u"],
+      [0,"u","u","u","b",0,"u","u","u","u",0,0,0,0,0,0,0,0,"u","u","u","u","u","u"],
+      [0,"u","u","u","b",0,"u","u","u","u",0,"u","u","u","u","u","u",0,"u","u","u","u","u","u"],
+      [0,"u","u","u","b",0,"u","u","u","u",0,"u","u","u","u","u","u",0,"u","u","u","u","u","u"],
+      [0,0,0,0,0,0,"u","u","u","u",0,"u","u","u","u","u","u",0,"u","u","u","u","u","u"]
+    ],
+    currentRow: 0,
+    currentCol: 23,
+    previousState: "u"
+
   }
 }
 
-  render() {
+render(){
+
+var arr=this.state.arr
+var rows = arr.map(function (item, i){
+    var entry = item.map(function (element, j) {
+        return (
+            <td className={element}></td>
+            );
+    });
     return (
-      <div>
-      <table onKeyUp={this.handleKeyUp}>
-      <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td rowSpan="8" className="barrier"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td rowSpan="3" colSpan="3" className="building"></td>
-          <td></td>
-          <td rowSpan="2" colSpan="2" className="building" className="active"></td>
-        </tr>
-        <tr>
-          <td rowSpan="4" colSpan="4" className="building"></td>
-          <td></td>
-          <td rowSpan="4" colSpan="3" className="building"></td>
-          <td></td>
-          <td></td>
-          <td rowSpan="4" colSpan="6" className="building"></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td rowSpan="6" className="barrier" className="building"></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td rowSpan="5" colSpan="3" className="building"></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td colSpan="8" className="barrier"></td>
-          <td></td>
-          <td colSpan="6" className="barrier"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td colSpan="8" className="barrier"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td rowSpan="6" colSpan="6" className="building"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td rowSpan="3" colSpan="6" className="building"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td rowSpan="3" colSpan="3" className="building"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td colSpan="6" className="barrier"></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td colSpan="6" className="barrier"></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td colSpan="6" className="barrier"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td colSpan="6" className="barrier"></td>
-          <td></td>
-          <td rowSpan="3" colSpan="3" className="building"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td colSpan="6" className="barrier"></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td colSpan="6" className="barrier"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td rowSpan="3" colSpan="3" className="building"></td>
-          <td></td>
-          <td rowSpan="3" className="barrier"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td colSpan="6" className="barrier"></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td rowSpan="3" colSpan="6" className="building"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td rowSpan="6" colSpan="4" className="building"></td>
-          <td></td>
-          <td></td>
-          <td rowSpan="6" colSpan="6" className="building"></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td colSpan="5" className="barrier"></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td rowSpan="3" colSpan="3" className="building"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td rowSpan="3" colSpan="6" className="building"></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-      </table>
-      </div>
-    );
+        <tr key={i}> {entry} </tr>
+     );
+});
+
+
+      return (<table><tbody>{rows}</tbody></table>)
   }
 
 }
