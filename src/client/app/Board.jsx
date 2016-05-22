@@ -40,10 +40,10 @@ getInitialState(){
 },
 
 componentDidMount () {
-  $(document.body).on('keydown', this.handleKeyDown);
+  $(document.body).on('keyup', this.handleKeyUp);
 },
 
-handleKeyDown (e) {
+handleKeyUp (e) {
   var row = this.state.row
   var col = this.state.col
   var arr = this.state.arr

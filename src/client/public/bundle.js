@@ -61,6 +61,14 @@
 	
 	var _Board2 = _interopRequireDefault(_Board);
 	
+	var _Menu = __webpack_require__(/*! ./Menu.jsx */ 162);
+	
+	var _Menu2 = _interopRequireDefault(_Menu);
+	
+	var _Title = __webpack_require__(/*! ./Title.jsx */ 163);
+	
+	var _Title2 = _interopRequireDefault(_Title);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -85,11 +93,41 @@
 	        'div',
 	        null,
 	        _react2.default.createElement(
-	          'p',
-	          null,
-	          ' Hello React!'
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'twelve columns' },
+	            _react2.default.createElement(_Menu2.default, null)
+	          )
 	        ),
-	        _react2.default.createElement(_Board2.default, null)
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'twelve columns' },
+	            _react2.default.createElement(_Title2.default, null)
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'two columns' },
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Placeholder'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'six columns' },
+	            _react2.default.createElement(_Board2.default, null)
+	          )
+	        )
 	      );
 	    }
 	  }]);
@@ -20220,9 +20258,9 @@
 	    };
 	  },
 	  componentDidMount: function componentDidMount() {
-	    (0, _jquery2.default)(document.body).on('keydown', this.handleKeyDown);
+	    (0, _jquery2.default)(document.body).on('keyup', this.handleKeyUp);
 	  },
-	  handleKeyDown: function handleKeyDown(e) {
+	  handleKeyUp: function handleKeyUp(e) {
 	    var row = this.state.row;
 	    var col = this.state.col;
 	    var arr = this.state.arr;
@@ -30418,6 +30456,75 @@
 	return jQuery;
 	}));
 
+
+/***/ },
+/* 162 */
+/*!*********************************!*\
+  !*** ./src/client/app/Menu.jsx ***!
+  \*********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = _react2.default.createClass({
+	  displayName: "Menu",
+	  render: function render() {
+	    return _react2.default.createElement(
+	      "div",
+	      { className: "menu" },
+	      _react2.default.createElement(
+	        "button",
+	        null,
+	        "Home"
+	      ),
+	      _react2.default.createElement(
+	        "button",
+	        null,
+	        "About"
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+/* 163 */
+/*!**********************************!*\
+  !*** ./src/client/app/Title.jsx ***!
+  \**********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = _react2.default.createClass({
+	  displayName: 'Title',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'h1',
+	      null,
+	      'Choose Your Own Trans Mis/Adventure'
+	    );
+	  }
+	});
 
 /***/ }
 /******/ ]);

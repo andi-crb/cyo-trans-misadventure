@@ -1,11 +1,15 @@
+body {
+  background-color: #C8A2C8;
+}
+
 table , td, th {
 	border: 0px;
 	border-collapse: collapse;
 }
 td, th {
 	padding: 3px;
-	width: 25px;
-	height: 20px;
+	width: 15px;
+	height: 12px;
   background-color: gray;
 }
 
@@ -19,4 +23,19 @@ td.u {
 
 td.a {
   background-color: red;
+}
+
+.menu {
+  background-color: black;
+  padding: 10px;
+}
+
+button {
+  background-color: #C8A2C8;
+  margin-left: 3px;
+  margin-bottom: 0px;
+}
+
+h1 {
+  text-align: center;
 }
