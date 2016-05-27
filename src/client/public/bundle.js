@@ -30551,7 +30551,7 @@
   \**************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -30564,16 +30564,32 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = _react2.default.createClass({
-	  displayName: 'Resources',
+	  displayName: "Resources",
+	  getInitialState: function getInitialState() {
+	    return {
+	      resources: []
+	    };
+	  },
+	  componentDidMount: function componentDidMount() {
+	    var obj = { citizenship: 1, confidence: 2, "endocrinology-referral": 0, home: 1, information: 3, money: 2, "psych-assessment-referral": 1, "public-surgery-referral": 0 };
+	    var results = [];
+	    for (var key in obj) {
+	      var count = obj[key];
+	      for (var i = 0; i < count; i++) {
+	        results.push(key);
+	      }
+	      this.setState({ resources: results });
+	    }
+	  },
 	  render: function render() {
-	    var arr = ['money', 'money', 'home', 'confidence', 'home', 'confidence'];
+	    var arr = this.state.resources;
 	
 	    var resources = arr.map(function (icon, i) {
 	      icon = "./images/" + icon + ".png";
-	      return _react2.default.createElement('img', { src: icon });
+	      return _react2.default.createElement("img", { src: icon, alt: icon });
 	    });
 	    return _react2.default.createElement(
-	      'div',
+	      "div",
 	      null,
 	      resources
 	    );
