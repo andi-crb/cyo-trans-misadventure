@@ -69,6 +69,10 @@
 	
 	var _Title2 = _interopRequireDefault(_Title);
 	
+	var _Resources = __webpack_require__(/*! ./Resources.jsx */ 164);
+	
+	var _Resources2 = _interopRequireDefault(_Resources);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -126,6 +130,20 @@
 	            'div',
 	            { className: 'six columns' },
 	            _react2.default.createElement(_Board2.default, null)
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'two columns' },
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Placeholder'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'two columns' },
+	            _react2.default.createElement(_Resources2.default, null)
 	          )
 	        )
 	      );
@@ -30522,6 +30540,42 @@
 	      'h1',
 	      null,
 	      'Choose Your Own Trans Mis/Adventure'
+	    );
+	  }
+	});
+
+/***/ },
+/* 164 */
+/*!**************************************!*\
+  !*** ./src/client/app/Resources.jsx ***!
+  \**************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = _react2.default.createClass({
+	  displayName: 'Resources',
+	  render: function render() {
+	    var arr = ['money', 'money', 'home', 'confidence', 'home', 'confidence'];
+	
+	    var resources = arr.map(function (icon, i) {
+	      icon = "./images/" + icon + ".png";
+	      return _react2.default.createElement('img', { src: icon });
+	    });
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      resources
 	    );
 	  }
 	});
